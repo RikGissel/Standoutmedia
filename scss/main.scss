@@ -1,0 +1,12 @@
+// abstracts folder
+@import "abstracts/mixins";
+
+// base folder
+@import "base/global";
+
+// layout folder
+@import "layout/footer";
+@import "layout/header";
+
+// pages folder
+@import "pages/home";

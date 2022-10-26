@@ -1,0 +1,236 @@
+.hero-image-container {
+    width: 100%;
+    background-image: url(../assets/slider.jpg);
+    font-family: $font-family;
+    height: auto;
+    @include cover-background;
+
+    .slider-wrapper {
+        @include flex-center-vertical;
+        padding: 168.5px 0;
+        width: 70%;
+        margin: auto;
+
+        .wrapper-content {
+            animation: fadeUp 1s ease-in-out;
+            
+            @keyframes fadeUp {
+                from {
+                  opacity: 0;
+                  transform: translateY(250px);
+                }
+                to {
+                  opacity: 1;
+                }
+              }
+        }
+    h1 {
+        font-size: 45px;
+        color: $white;
+
+        span {
+            font-weight: 900;
+            font-size: 55px;
+            text-shadow: 0px 5px 2px rgba(0,0,0,0.6);
+        }
+    }
+
+    button {
+        background-color: $dark-red;
+        border: none;
+        padding: 8px 16px;
+        font-size: 15px;
+        margin-top: 20px;
+        color: white;
+        background: rgb(95, 10, 10, 0.8);
+    }
+}
+}
+
+// back to top button styling
+#back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    color: $black;
+}
+
+@media (max-width: $lg-breakpoint) {
+    .slider-wrapper {
+        justify-content: center;
+        width: 100% !important;
+
+        .wrapper-content {
+            text-align: center;
+        }
+    }
+}
+
+
+//services styling
+.services-container {
+    height: auto;
+    width: 100%;
+    font-family: $font-family;
+    text-align: center;
+    padding: 50px 0;
+
+    .information {
+        padding-top: 10px;
+    }
+
+    .services-wrapper {
+        width: 70%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        margin: auto;
+        padding-top: 30px;
+
+        img {
+            padding-bottom: 25px;
+        }
+
+        h3 {
+            margin: 10px 0;
+        }
+    }
+
+}
+
+// about container styling
+.about__container {
+    background-image: url(../assets/trae.jpg);
+    @include cover-background;
+    font-family: $font-family;
+    height: auto;
+    width: 100%;
+
+    .about__inner__wrapper {
+        width: 70%;
+        margin: auto;
+        padding: 30px 0;
+
+        .txt-container {
+            display: flex;
+
+            .about__wrapper__txt {
+                width: 50%;
+            }
+        }
+
+        .about__images {
+            display: flex;
+            justify-content: space-evenly;
+
+            img {
+                object-fit: contain;
+            }
+        }
+    }
+}
+
+.contact__container {
+    height: auto;
+    font-family: $font-family;
+    padding: 50px 0;
+
+    .contact-wrapper {
+        width: 70%;
+        margin: auto;
+
+        .contact-txt {
+            text-align: center;
+            margin: 0 0 25px 0;
+
+            h2 {
+                padding-bottom: 25px;
+            }
+        }
+
+        .contact-forms {
+            display: flex;
+            .input-fields {
+                display: flex;
+                flex-direction: column;
+
+                input {
+                height: 40px;
+                margin: 5px 0;
+                padding: 8px;
+                }
+
+                textarea {
+                    margin-top: 10px;
+                    font-family: $font-family;
+                    padding: 10px;
+                }
+
+                button {
+                    background-color: $dark-red;
+                    border: none;
+                    height: 40px;
+                    text-transform: uppercase;
+                    color: $white;
+                    font-weight: bold;
+                    margin-top: 10px;
+                }
+            }
+
+            .input-fields, .google-maps__iframe {
+                width: 50%;
+            }
+        }
+    }
+}
+
+@media (max-width: $lg-breakpoint) {
+
+    .about__inner__wrapper {
+        @include flex-column;
+        align-items: center;
+
+        .txt-container {
+            @include flex-center-column;
+            align-items: center;
+            text-align: center;
+
+            .about__wrapper__txt {
+                margin: 20px 0;
+            }
+        }
+
+        .about__images {
+            @include flex-center-column;
+            text-align: center;
+            width: 50%;
+    
+            img {
+                margin: 50px 0;
+            }
+        }
+    }
+
+}
+
+@media (max-width: $xl-breakpoint) {
+
+    .contact-wrapper {
+        width: 100% !important;
+    }
+    .contact-forms {
+        @include flex-column;
+        align-items: center;
+    }
+
+    .input-fields, .google-maps__iframe {
+        width: 85% !important;
+        margin-right: 0px !important;
+        margin-left: 0px !important;
+    }
+
+    .input-fields {
+        margin-bottom: 30px;
+    }
+    }

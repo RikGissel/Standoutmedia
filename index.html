@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="assets/logo_korrekt.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/main.css">
+    <title>Standoutmedia</title>
+</head>
+<body>
+
+    <!-- BEMÆRK: HEADEREN OG FOOTEREN ER BYGGET SOM KOMPONENTER I JAVASCRIPT OG IMPLEMENTERET I HTML I BUNDEN-->
+
+    <div id="header"></div>
+
+    <!-- back to top button -->
+    <a id="back-to-top" href="#"><i class="fa-solid fa-arrow-up fa-2x"></i></a>
+    <!-- back to top button -->
+
+    <main class="hero-image-container">
+        <div class="slider-wrapper">
+            <div class="wrapper-content">
+            <h1>Vil du have<br> <span>flotte gulve?</span></h1>
+            <button>Få et tilbud</button>
+            </div>
+        </div>
+    </main>
+    <section class="services-container">
+        <h2>Velkommen til Vedsted Gulvservice <br> - din professionelle gulvpartner</h2>
+        <p class="information">Har du brug for flottere gulve? Så kan vi hjælpe dig.<br> Vi kan det hele: Rive gulve op, lægge nye, isolere, slibe og selvfølgelig<br>behandle dem med de bedste produkter.<br>Bare spørg - så finder vi løsningen</p>
+
+        <!-- jeg har lavet min egen REST Api til denne sektion "services-wrapper" og lagt billederne/teksterne op på den. Så alt data bliver trukket via min server -->
+        <section class="services-wrapper"></section>
+    </section>
+
+    <section class="about__container">
+        <div class="about__inner__wrapper">
+            <div class="txt-container">
+        <div class="about__wrapper__txt" style="margin-right: 25px;">
+            <h2>Vi rådgiver gerne</h2>
+            <p>Er du i tvivl om, hvad den rigtige løsning er for dig? Så hjælper vi gerne med at finde svaret. Lad os aftale et møde og se på det sammen - så kan vi hurtigt fortælle, om du har brug for et helt nyt gulv - eller om det kan klares med en omgang slibning og behandling.<br><br></p>
+            <p>Ring eller skriv - så skal vi nok hjælpe dig godt videre.</p>
+        </div>
+        <div class="about__wrapper__txt">
+            <h2>Vi har erfaringen</h2>
+            <p>Hos Vedsted Gulvservice har vi i generationer leveret flotte gulvløsninger til sjællandske familier, organisationer og virksomheder. <br><br></p>
+            <p>Så har du et behov, så tøv ikke - tag fat i os, så finder vi den løsning, der er den helt rigtige for dig.</p>
+        </div>
+        </div>
+        <div class="about__images">
+            <img src="assets/junckers.png" alt="sponsor picture">
+            <img src="assets/byg-garanti.png" alt="sponsor picture">
+            <img src="assets/gulvbranchen.png" alt="sponsor picture">
+        </div>
+        </div>
+    </section>
+
+    <section class="contact__container">
+        <div class="contact-wrapper">
+            <div class="contact-txt">
+                <h2>Kontakt os</h2>
+                <p>Kontakt os i dag på telefon: <strong>44 91 48 91</strong> eller på e-mail: <strong>info@vedsted-gulve.dk</strong> og lad os høre,<br> hvad du drømmer om.<br> Så skal vi nok gøre vores for, at drømmen går i opfyldelse.</p>
+            </div>
+            <div class="contact-forms">
+                <form class="input-fields" style="margin-right: 30px;">
+                    <input type="text" placeholder="Navn">
+                    <input type="tel" placeholder="Telefon">
+                    <input type="email" placeholder="Mailadresse">
+                    <textarea placeholder="Besked" rows="15"></textarea>
+                    <button type="submit">Send</button>
+                </form>
+                <div class="google-maps__iframe" style="margin-left: 30px;">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2253.760245395406!2d12.349214116084573!3d55.60618621075759!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465257958097bc11%3A0xb785be8c22812cfa!2sIndustrivangen%2022%2C%202635%20Ish%C3%B8j!5e0!3m2!1sda!2sdk!4v1666734638156!5m2!1sda!2sdk" width="100%" height="450px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="footer"></div>
+
+    <!-- script tags -->
+    <script src="js/API/service-api.js"></script>
+    <script type="text/javascript" src="js/components/header.js"></script>
+    <script type="text/javascript" src="js/components/footer.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
