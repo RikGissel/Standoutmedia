@@ -1,5 +1,5 @@
 Promise.all([
-    fetch("https://retoolapi.dev/Myh01p/standoutmedia", { /* <----- jeg kalder på min egen REST API ved hjælp af fetch og promise all */
+    fetch("https://retoolapi.dev/7u04S3/standoutmedia", { /* <----- jeg kalder på min egen REST API ved hjælp af fetch og promise all */
       headers: {
         Accept: "application/json",
       },
